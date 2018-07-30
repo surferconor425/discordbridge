@@ -10,11 +10,11 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y curl supervisor build-essential libicu-dev git
 
 # Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install --fix-missing -y nodejs
 
 # Get discord-irc
-RUN npm install -g discord-irc-billimek@1.0.4
+RUN npm install -g discord-irc
 
 # Add configurations
 ADD config.json discord-irc/config.json
